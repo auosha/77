@@ -1,0 +1,251 @@
+@media only screen and (max-width: 767px){
+    html{
+        font-size: 50%;
+    }
+    header{
+        padding: 2.2rem 4rem;
+    }
+    #ham-menu{
+        display: block;
+        width: 30px;
+        position: fixed;
+        display: grid;
+        background: transparent;
+        right: 30px;
+        font-size: 30px;
+    }
+    nav a#logo{
+        font-size: 23px;
+    }
+    nav ul{
+        background:#fff;
+        height: calc(100vh - 73.6px);
+        position: fixed;
+        left:-100vw;
+        top: 73.6px ;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: 1s ease-in-out;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        gap: 0 ;
+}
+.sticky header{
+    background: #fff;
+}
+nav a#logo{
+    color: #0062ff;
+  }
+  nav ul a{
+    color: #0062ff;
+  }
+  nav a#Download{
+    color: #fff;
+    background: #0062ff;
+    border-color: #0062ff;
+    }
+nav ul.active{
+    left:0;
+}
+nav a#Download{
+    font-size: 40px;
+}
+nav ul a{
+    font-size: 40px;
+}
+.imgslide{
+
+  height: 659px;
+}
+.img-responsive{
+    width: 360px;
+    position: relative;
+    top: -22px;
+  }
+  .downloadWorld{
+    font-size: 30px;
+    font-weight: 700;
+      word-spacing: normal;
+      position: relative;
+      top: 5px;
+  }
+  .img1{
+    width: 50px;
+  }
+  .line{
+    width: 70%;
+  }
+  .imgslide{
+    width: 375px;
+  }
+  h4#title{
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    top:15px;
+    font-family: 'Rakkas', cursive;
+  }
+  p#content{
+    font-size: 15px;
+  }
+  .btn.btn.seeMore1{
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    top:10px;
+  }
+  .downloadWorld55{
+    font-size: 20px;
+  }
+  .img2{
+    width: 35px
+  }
+  .contentworld{
+    font-size: 15px;
+  }
+  .downloadWorld2{
+    font-size: 23px;
+    font-weight: 700;
+  }
+  .conteent{
+    font-size: 10x;
+  }
+  .appstore{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+  }
+  .appstore1{
+    width: 50px;
+    height: 100px;
+    margin-right: 35px;
+  }
+  .appstore2{
+    width: 50px;
+    height: 100px;
+    position: relative;
+  }
+  .googleplay{
+    position: relative;
+    right: -10px;
+    margin-top: 30px;
+    width: 120px;
+  }
+  .googleplay1{
+    margin-top: 30px;
+    height: 40px;
+    width: 120px;
+  }
+  #scroll-top{
+    position: fixed;
+    display: none;
+    place-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    right: 5.5rem;
+    bottom: 5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .aboutworld{
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .aboutworld1{
+    font-size: 15px;
+  }
+  .img-responsive1{
+    position: relative;
+    width: 350px;
+  }
+  .img-responsive11{
+    width: 270px;
+  }
+  .body1 {
+    width: 00px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly
+  }
+  .footerworld{
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .glassIco {
+    --width: 50px;
+    width: var(--width);
+    margin: 5px;
+   }
+   .logofooter{
+    width: 30px;
+    margin-right: 10px;
+  }
+  .footer12{
+    position: relative;
+    top: 0px;
+    justify-content: space-evenly;
+  }
+  .glassIcons{
+  
+    position: relative;
+    top: 40px;
+    right: -10px;
+  }
+}
+
+@media only screen and (min-width: 768px){ 
+  
+}
+
+
+@media only screen and (min-width: 992px){
+  .img-responsive1{
+    width: 458px;
+    position: relative;
+    top: 100px;
+  }
+  .contentworld{
+    font-size: 18px;
+  }
+  .img-responsive{
+    position: relative;
+    top:-10px;
+    width: 480px;
+  }
+  .aboutworld{
+    font-weight: 700;
+    font-size: 28px;
+  }
+  .aboutworld1{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .conteent{
+    font-size: 15x;
+  }
+  .appstore1{
+    width: 150px;
+    position: relative;
+    right: 70px;
+  }
+  .appstore2{
+    width: 150px;
+    position: relative;
+    right: 50px;
+  }
+  .nav-font{
+    font-size: 22px;
+  }
+  .aa{
+    font-size: 15px;
+  }
+ }

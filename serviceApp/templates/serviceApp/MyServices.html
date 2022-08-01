@@ -1,0 +1,101 @@
+{% extends 'serviceApp/layout/base.html'%}
+{% load static %}
+
+  {% block slider_content %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+               {%for item in len_list%}
+
+                      <button style="background:#0062ff;width:10px;height:0px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{item}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+               {%endfor %}
+      </div>
+          <div class="carousel-inner">
+
+                 {%for item in slideshow_list%}
+                 <div class="carousel-item active" data-bs-interval="10000">
+              <img class="imgslide" src="{{item.slid_image.url}}">
+            </div>
+              {%endfor %}
+          </div>
+        <div class="shadow"> 
+          </div> 
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" >Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+       
+       
+{%endblock slider_content%}
+
+
+{%block content%}
+
+<h1 class="downloadWorld">
+    <span style="color:#0062ff;">Our&nbsp;</span><span>Services</span>
+      <img class="img2" src="{% static 'img/repair-tool.png' %}">
+    </h1>
+    <hr class="line container title text-center wow fadeIn">
+<div class="servicess" >
+  
+<div class="conatainer">
+        {%for item in category_list%}
+        
+    <div class="serviceBox">
+     <!-- <p class="side"> ONE </p> -->
+        <div class="icon">
+            <img style="width:100%;height:100%;border-bottom: 1px solid #ccc;" src="{{item.cat_image.url}}">
+        </div>
+        <div class="content">
+            <h4 class="p-3 m-0 name12" id="title">{{item.cat_name}}</h4>
+            <p class="content55" id="content" style="color:black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi</p>
+            <a href="#"><button type="button" style="background:#0062ff;" class="btn btn seeMore1">See More</button></a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+</div>
+</div>
+
+
+
+<div class="context">
+  <div class="container title text-center wow fadeIn" data-wow-duration="1500ms" >
+    <span class="downloadWorld55"><span style="color:#0062ff">How To Insure&nbsp;</span><span>Your Service</span>
+    <img class="img2" src="{% static 'img/guaranteed.png' %}">
+    </span>
+    <hr style="position:relative;top:60px" class="line container title text-center wow fadeIn">
+    </div>
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-md-6" style="margin-top:50px;margin-bottom:10px">
+          <div class="content-block">
+            <main>
+              <ol class="gradient-list">
+                <li class="contentworld">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li class="contentworld">Aenean tincidunt elit at ipsum cursus, vitae interdum nulla suscipit.</li>
+                <li class="contentworld">Curabitur in orci vel risus facilisis accumsan.</li>
+                <li class="contentworld">Morbi eleifend tortor lacinia sapien sagittis, quis pellentesque felis egestas.</li>
+             
+              </ol>
+            </main>
+          </div>
+        </div>
+        <div class="col-md-6 padding-0 ">
+          <img class="img-responsive1" src="{% static 'img/054-Online-Sales (2).svg' %}" alt="">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content%}
