@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.utils.safestring import mark_safe
 
-from serviceApp.models import User, Category, Service, SlidShow
+from serviceApp.models import User, Category, Service, SlidShow, Team 
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -18,15 +18,12 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 
-
 class SlidShowAdmin(admin.ModelAdmin):
     def admin_image(self, obj):
         return mark_safe ('<img src="%s" style="width: 145px; height:145px;"/>' % obj.slid_image.url)
     admin_image.allow_tags = True
     admin_image.short_description ='slide_show Photo'
     list_display = ('admin_image','slid_title')
-
-
 
 
 class ServiceAdmin(admin.ModelAdmin):
@@ -37,9 +34,18 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ('serv_name', 'serv_details','date','serv_cat','service_image')
 
 
+class OurTeamAdmin(admin.ModelAdmin):
+    def team_image(self, obj):
+        return mark_safe ('<img src="%s" style="width: 145px; height:145px;"/>' % obj.team_img.url)
+    team_image.allow_tags = True
+    team_image.short_description ='Team Photo'
+    list_display = ('team_name', 'team_details','team_image')
+
+
 admin.site.unregister(Group)
 admin.site.register(User)
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Service,ServiceAdmin)
+admin.site.register(Team,OurTeamAdmin)
 admin.site.register(SlidShow,SlidShowAdmin)
 admin.site.site_header='Seven Profession'

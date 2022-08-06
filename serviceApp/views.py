@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from serviceApp.forms import CategoryForm, ServiceForm
-from serviceApp.models import Category, Service, SlidShow
+from serviceApp.models import Category, Service, SlidShow, Team
 
 
 def add_category(request):
@@ -20,12 +20,12 @@ def add_category(request):
 
 
 
-
 def index(request):
     category_list = Category.objects.all()
     slideshow_list=SlidShow.objects.all()
     len_list=[*range(0, len(slideshow_list), 1)]
-    return render(request, 'serviceApp/MyServices.html',{'category_list':category_list,'slideshow_list':slideshow_list,'len_list':len_list})
+    team_list = Team.objects.all()
+    return render(request, 'serviceApp/MyServices.html',{'category_list':category_list,'slideshow_list':slideshow_list,'len_list':len_list,'team_list':team_list,})
 
 
 
@@ -45,8 +45,6 @@ def add_service(request, id):
     else:
         ServForm = ServiceForm()
         return render(request, 'serviceApp/Add_Service.html', {'ServForm': ServForm})
-
-
 
 
 def show_service(request,id):

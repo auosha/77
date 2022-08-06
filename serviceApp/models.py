@@ -37,7 +37,6 @@ class Service (models.Model):
     serv_details=models.TextField(verbose_name='Service Detail')
     serv_Img = models.ImageField(upload_to='Service_images/',verbose_name='Service Photo', null=True)
     date = models.DateTimeField(auto_now=True,null=True,verbose_name='Date')
-    # user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='x', blank=True)
     serv_cat=models.ForeignKey(Category,on_delete=models.CASCADE, related_name='y', verbose_name='Service Category')
 
     def __str__(self):
@@ -49,3 +48,16 @@ class Service (models.Model):
         verbose_name_plural = 'Services'
 
 
+class Team (models.Model):
+    team_name = models.CharField(max_length=250, verbose_name='Name')
+    team_details=models.TextField(verbose_name='Detail')
+    team_img = models.ImageField(upload_to='team_image/',verbose_name='Team Photo', null=True)
+    
+
+    def __str__(self):
+        return f'{self.team_name}'
+
+
+    class Meta:
+        verbose_name = 'Team'
+        verbose_name_plural = 'Teams'

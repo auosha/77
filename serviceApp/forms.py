@@ -1,5 +1,5 @@
 from django import forms
-from serviceApp.models import Service, Category
+from serviceApp.models import Service, Category, Team
 
 
 class CategoryForm(forms.ModelForm):
